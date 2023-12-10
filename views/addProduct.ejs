@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Data Student</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body class="bg-body-tertiary">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <% if (messages.error) { %>
+                    <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+                    <% } %>
+                        <div class="card border-0 shadow rounded">
+                            <div class="card-body py-4">
+                                <form method="post" action="<%= action %>" enctype="multipart/form-data">
+                                    <div class="form-group mb-4">
+                                        <label class="mb-2" for="nama_barang">Name barang</label>
+                                        <input type="text" class="form-control" name="nama_barang"
+                                            value="<%= nama_barang %>" placeholder="Input Name barang" required>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label class="mb-2" for="harga_barang">harga barang</label>
+                                        <input type="number" class="form-control" name="harga_barang"
+                                            placeholder="Input Harga" value="<%= harga_barang %>" required>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label class="mb-2" for="deskripsi_barang">deskripsi</label>
+                                        <input type="text" class="form-control" name="deskripsi_barang"
+                                            placeholder="Input deskripsi_barang" value="<%= deskripsi_barang %>"
+                                            required>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label class="mb-2" for="jenis_barang">jenis barang</label>
+                                        <select class="form-control" name="jenis_barang" required>
+                                            <% if(jenis_barang==='foods' ) { %>
+                                                <option value="" disabled>select category</option>
+                                                <option value="foods" selected>Food</option>
+                                                <option value="Drinks">Drink</option>
+                                                <% }else if(jenis_barang==='Drinks' ) { %>
+                                                    <option value="" disabled>select category</option>
+                                                    <option value="foods">Food</option>
+                                                    <option value="Drinks" selected>Drink</option>
+                                                    <% }else { %>
+                                                        <option value="" selected disabled>select jenisnya</option>
+                                                        <option value="foods">Food</option>
+                                                        <option value="Drinks">Drink</option>
+                                                        <% } %>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label for="gambar_barang" class="mb-2">gambar barang</label>
+                                        <input type="file"
+                                            onchange="document.getElementById('prevgambarbarang').src = window.URL.createObjectURL(this.files[0])"
+                                            class="form-control m-2" name="gambar_barang" required
+                                            value="<%= gambar_barang %>">
+                                            <img id="prevgambarbarang" src="<%= gambar_barang %>" alt="<%= gambar_barang %>" width="100px">
+
+
+
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">SIMPAN</button>
+                                    <button type="reset" class="btn btn-warning">RESET</button>
+                                </form>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

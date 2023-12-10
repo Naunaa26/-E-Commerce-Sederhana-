@@ -1,0 +1,297 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.form-box{
+  margin-top: 8.5rem;
+}
+
+.backnya{
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../images/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+
+.button-box{
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #24ffed1f;
+  border-radius: 30px;
+}
+
+.toogle-btn{
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  color: white;
+}
+
+#btn{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right, #10ff44,#0ff7ff);
+  transition: .5s;
+  border-radius: 30px;
+}
+
+.social-icons{
+  margin: 30px auto;
+  text-align: center;
+}
+
+.social-icons img{
+  width: 30px;
+  margin: 0 12px;
+  box-shadow: 0 0 20px 0 #7f7f7f3d;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.input-group{
+  margin-top: 5rem;
+  top: 180px;
+  position: absolute;
+  width: 380px;
+  transition: .5s;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+input{
+  color: white;
+}
+
+.input-field::placeholder{
+  color: white;
+}
+
+.input-field{
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #ffffff;
+  outline: none;
+  color: white;
+  background: none;
+}
+
+
+.submit-nya{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.submit-btn{
+  width: 100%;
+  padding: 10px 30px;
+  cursor: pointer;
+  border-radius: 30px !important;
+  background: linear-gradient(to right, #10ff44,#0ff7ff);
+  border: 0;
+  outline: none;
+  color: white;
+}
+
+
+
+.chech-box{
+  margin: 30px 10px 30px 0;
+}
+
+span{
+  color: #ffffff;
+  font-size: 12px;
+  padding-top: 30px;
+}
+
+.contain-col{
+width: 100%;
+}
+
+.kiri{
+  width: 20%;
+  height: 300%;
+  background-color: #6c8a00;
+  position: absolute;
+}
+
+.kanan{
+  width: 80%;
+  margin-left: 17rem;
+  height: 300%;
+}
+
+.kiri h2{
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  margin-top: 12px;
+  animation: slideLeft 1s ease forwards;
+}
+
+.tombol{
+  margin-top: 30px;
+  text-align: center;
+}
+.tombol button:hover a{
+  color: white;
+  background: linear-gradient(to right, #1e4200,#661d00);
+}
+.tombol button:hover {
+  background: linear-gradient(to right, #1e4200,#661d00);
+}
+
+.tombol button a {
+  color: black;
+}
+/* .tombol button a:hover{
+  color: white;
+} */
+
+.kiri img{
+  width: 8rem;
+  height: auto;
+  margin-left: 24%;
+  margin-top: 2rem;
+  animation: slideBottom 1s ease forwards;
+}
+
+.kanan img{
+  width: 10%;
+}
+
+.kanan h1{
+  margin-top: -5.5rem;
+  margin-left: 8rem;
+  font-size: 30px;
+  font-weight: 600;
+  width: 40rem;
+}
+
+.fodda img{
+  width: 95%;
+  height: 60%;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: 2rem;
+}
+
+.kanan h2{
+  font-size: 20px;
+  margin-left: 8rem;
+  width: 40rem;
+}
+
+.kanannay{
+  margin-top: -3rem;
+  margin-bottom: 1.2rem;
+}
+
+.kanan a{
+  width: 20%;
+  padding: 12px 30px;
+  cursor: pointer;
+  border-radius: 10px !important;
+  background: #6c8a00;
+  border: 0;
+  outline: none;
+  text-align: center;
+  margin-left: 88%;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.naya {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #6c8a00;
+  border: 0;
+  outline: none;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+/* Add a hover effect */
+.naya:hover {
+  background: #8fa200;
+}
+
+
+
+@keyframes slideRight {
+  0% {
+      transform: translateX(-100px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0px);
+      opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+      transform: translateX(100px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0px);
+      opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+      transform: translateY(100px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0px);
+      opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+      transform: translateY(-100px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0px);
+      opacity: 1;
+  }
+}
+
